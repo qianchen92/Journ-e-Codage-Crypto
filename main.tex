@@ -1,0 +1,45 @@
+\documentclass[10pt]{article}
+\input{preamble.tex}
+
+%%%%%%%%%%%%%%%%%% macros %%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+\title{Shorter Publicly Verifiable Ciphertexts in Structure-Preserving Chosen-Ciphertext-Secure Public-Key Encryption}
+
+\author{Chen Qian}
+
+
+\maketitle
+
+
+Structure-preserving cryptography is a world where messages, signatures~\cite{DBLP:conf/crypto/AbeFGHO10}, ciphertexts and public keys are entirely made of 
+elements of a group over which a bilinear map is efficiently computable. While structure-preserving signatures have received 
+much attention   the last $6$ years, structure-preserving encryption schemes have undergone slower development. 
+In particular, the best known  structure-preserving cryptosystems with chosen-ciphertext (IND-CCA2) security either rely on 
+symmetric pairings or require 
+long ciphertexts comprised of hundred of group elements or do not provide publicly verifiable ciphertexts. We provide a publicly verifiable construction based on the SXDH assumption in asymmetric bilinear groups
+ $e : \G \times \hat{\G} \rightarrow \G_T$, 
+which features relatively short ciphertexts.   For typical parameters, our ciphertext size amounts to less than $40$ elements of $\G$. 
+As a second contribution, we provide a structure-preserving encryption scheme with perfectly randomizable ciphertexts and replayable 
+chosen-ciphertext security. Our new RCCA-secure system significantly improves upon the best known system featuring similar properties in terms 
+of ciphertext size. \smallskip \smallskip
+
+Structure-preserving cryptography is a world where message, signatreu, ciphertexts and public keys are entirely made of elements of a group over which q bilinear map is efficiently computable.
+Especialy, this property enables the combination with other cryptographic primitives (\eg signature, encryption, NIZK(Non-interactive Zero-Konwledge proof)).
+While structure-preserving signatures have received much attention the last $6$ years, structure-preserving encryption schemes have undergone slower development.
+
+
+\bibliographystyle{alpha}
+\bibliography{main} 
+\end{document}
+
+
+
+
