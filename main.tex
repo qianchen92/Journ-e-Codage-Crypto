@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[10pt]{llncs}
 \input{preamble.tex}
 
 %%%%%%%%%%%%%%%%%% macros %%%%%%%%%%%%%%%%%%
@@ -8,32 +8,31 @@
 
 \begin{document}
 
-\pagestyle{plain}
-
 
 \title{Shorter Publicly Verifiable Ciphertexts in Structure-Preserving Chosen-Ciphertext-Secure Public-Key Encryption}
 
-\author{Chen Qian}
-
-
+ \author{Beno\^{\i}t Libert\inst{1} \and Thomas Peters\inst{2} \and Chen Qian\inst{3}}
+\institute{ CNRS, Laboratoire LIP
+  (CNRS, ENSL, U\@. Lyon, Inria, UCBL),\\ ENS de Lyon~(France) \and 
+  FNRS \& UCLouvain, ICTEAM~(Belgium) \and Université de Rennes 1 \& IRISA, Rennes (France) }
 \maketitle
 
 
-Structure-preserving cryptography is a world where messages, signatures~\cite{DBLP:conf/crypto/AbeFGHO10}, ciphertexts and public keys are entirely made of 
-elements of a group over which a bilinear map is efficiently computable. While structure-preserving signatures have received 
-much attention   the last $6$ years, structure-preserving encryption schemes have undergone slower development. 
-In particular, the best known  structure-preserving cryptosystems with chosen-ciphertext (IND-CCA2) security either rely on 
+Structure-preserving cryptography is a world where messages, signatures, ciphertexts and public keys are entirely made of elements of a group over which q bilinear map is efficiently computable.
+Especially, this property allows for a smooth interaction of the considered primitives with Groth-Sahai (GS) proof system~\cite{DBLP:journals/eccc/GrothS07}, making them very powerful tools for the modular design of privacy-preserving cryptographic protocols.
+While structure-preserving signatures have received much attention the last $6$ years, structure-preserving encryption schemes have undergone slower development.
+In particular, the best known  structure-preserving cryptosystems with chosen-ciphertext (IND-CCA2)~\cite{DBLP:conf/pkc/AbeDKNO13} security either rely on 
 symmetric pairings or require 
-long ciphertexts comprised of hundred of group elements or do not provide publicly verifiable ciphertexts. We provide a publicly verifiable construction based on the SXDH assumption in asymmetric bilinear groups
+long ciphertexts comprised of hundred of group elements or do not provide publicly verifiable ciphertexts.
+
+We provide a publicly verifiable construction based on the symmetric eXternal Diffie-Hellman (SXDH) assumption in asymmetric bilinear groups
  $e : \G \times \hat{\G} \rightarrow \G_T$, 
 which features relatively short ciphertexts.   For typical parameters, our ciphertext size amounts to less than $40$ elements of $\G$. 
 As a second contribution, we provide a structure-preserving encryption scheme with perfectly randomizable ciphertexts and replayable 
-chosen-ciphertext security. Our new RCCA-secure system significantly improves upon the best known system featuring similar properties in terms 
-of ciphertext size. \smallskip \smallskip
+chosen-ciphertext (RCCA) security which is a meaningful relaxation of CCA2 security for the rerandomizable encryption scheme. 
+Our new RCCA-secure system significantly improves upon the best known system featuring similar properties in terms 
+of ciphertext size.
 
-Structure-preserving cryptography is a world where message, signatreu, ciphertexts and public keys are entirely made of elements of a group over which q bilinear map is efficiently computable.
-Especialy, this property enables the combination with other cryptographic primitives (\eg signature, encryption, NIZK(Non-interactive Zero-Konwledge proof)).
-While structure-preserving signatures have received much attention the last $6$ years, structure-preserving encryption schemes have undergone slower development.
 
 
 \bibliographystyle{alpha}
